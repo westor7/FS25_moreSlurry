@@ -3,7 +3,7 @@
 	<translationContributors/>
 	<texts>
 		<text name = "mms_setting_title" 		text = "More Slurry - Settings"/>
-		<text name = "mms_Multiplier_short" 		text = "Slurry Multiplier"/>
+		<text name = "mms_Multiplier_short" 		text = "Slurry Produce Multiplier"/>
 		<text name = "mms_Multiplier_long" 		text = "Select your multiplier number, higher number gets more slurry per game hour."/>
 		<text name = "mms_blink_warn"			text = "Warning: The slurry production multiplier from animals has been updated."/>
 	</texts>

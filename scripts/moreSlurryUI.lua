@@ -30,7 +30,7 @@ function moreSlurryUI:registerSettings()
         { name = "Multiplier", min = 1.5, max = 50, step = 0.5, autoBind = true, nillable = false }
     }
 
-    UIHelper.createControlsDynamically(settingsPage, "mm_setting_title", self, controlProperties, "mm_")
+    UIHelper.createControlsDynamically(settingsPage, "mms_setting_title", self, controlProperties, "mms_")
     UIHelper.setupAutoBindControls(self, self.settings, moreSlurryUI.onSettingsChange)
 
     -- Apply initial values
@@ -76,5 +76,5 @@ function moreSlurryUI:onFrameClose()
 	
 	moreSlurry.settings.Multiplier_OLD = moreSlurry.settings.Multiplier
 
-	g_currentMission:showBlinkingWarning(g_i18n:getText("mm_blink_warn"), 5000)
+	g_currentMission:showBlinkingWarning(g_i18n:getText("mms_blink_warn"), 5000)
 end

@@ -12,7 +12,7 @@ This mod allows you to change in **Farming Simulator 2025 (FS25)** the slurry li
 
 ## Installation
 
-1. Download this package from GitHub on the [Releases Page](https://github.com/westor7/FS25_MoreSlurry/releases) or alternative from [here](https://www.kingmods.net/en/fs25/mods/62318/more-slurry), after downloading save the `FS25_moreSlurry.zip` file into your mod folder under `<drive>:\Documents\My Games\FarmingSimulator2025\mods` direction.
+1. Download this package from GitHub on the [Releases Page](https://github.com/westor7/FS25_MoreSlurry/releases) or alternative from [here](https://www.kingmods.net/en/fs25/mods/62326/more-liquid-manure), after downloading save the `FS25_moreSlurry.zip` file into your mod folder under `<drive>:\Documents\My Games\FarmingSimulator2025\mods` direction.
 2. Launch the game, and activate the mod.
 3. Once you are inside the game, customize any of the **More Slurry** settings as needed within the `ESC -> Settings -> General Settings` tab.
 

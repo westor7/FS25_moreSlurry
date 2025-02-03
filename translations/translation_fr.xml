@@ -2,9 +2,9 @@
 <l10n>
 	<translationContributors/>
 	<texts>
-		<text name = "mm_setting_title" 		text = "Plus de boue - Paramètres"/>
-		<text name = "mm_Multiplier_short" 		text = "Multiplicateur de boue"/>
-		<text name = "mm_Multiplier_long" 		text = "Sélectionnez votre numéro multiplicateur, un nombre plus élevé obtient plus de bouillie par heure de jeu."/>
-		<text name = "mm_blink_warn"			text = "Attention : le multiplicateur de production de lisier à partir d'animaux a été mis à jour."/>
+		<text name = "mms_setting_title" 		text = "Plus de boue - Paramètres"/>
+		<text name = "mms_Multiplier_short" 		text = "Multiplicateur de boue"/>
+		<text name = "mms_Multiplier_long" 		text = "Sélectionnez votre numéro multiplicateur, un nombre plus élevé obtient plus de bouillie par heure de jeu."/>
+		<text name = "mms_blink_warn"			text = "Attention : le multiplicateur de production de lisier à partir d'animaux a été mis à jour."/>
 	</texts>
 </l10n>

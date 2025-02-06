@@ -9,6 +9,7 @@ moreSlurry.name = g_currentModName or "FS25_moreSlurry"
 moreSlurry.version = "1.0.1.0"
 moreSlurry.dir = g_currentModDirectory
 moreSlurry.init = false
+moreSlurry.initUI = false
 
 function moreSlurry.prerequisitesPresent(specializations)
 	return true
@@ -21,6 +22,8 @@ function moreSlurry:loadMap()
 		return
 	end
 	
+	moreSlurry.init = true
+	
 	InGameMenu.onMenuOpened = Utils.appendedFunction(InGameMenu.onMenuOpened, moreSlurry.initUi)
 
 	FSBaseMission.saveSavegame = Utils.appendedFunction(FSBaseMission.saveSavegame, moreSlurry.saveSettings)
@@ -28,7 +31,7 @@ end
 
 function moreSlurry:defSettings()
 	moreSlurry.settings.Multiplier = 2
-	moreSlurry.settings.Multiplier_OLD = 2
+	moreSlurry.settings.OldMultiplier = 2
 end
 
 function moreSlurry:saveSettings()
@@ -89,7 +92,7 @@ function moreSlurry:loadSettings()
 		end
 		
 		moreSlurry.settings.Multiplier = Multiplier
-		moreSlurry.settings.Multiplier_OLD = Multiplier
+		moreSlurry.settings.OldMultiplier = Multiplier
 		
 		delete(xmlFile)
 					
@@ -102,12 +105,12 @@ function moreSlurry:loadSettings()
 end
 
 function moreSlurry:initUi()
-	if not moreSlurry.init then
+	if not moreSlurry.initUI then
 		local uiSettingsmoreSlurry = moreSlurryUI.new(moreSlurry.settings)
 		
 		uiSettingsmoreSlurry:registerSettings()
 		
-		moreSlurry.init = true
+		moreSlurry.initUI = true
 	end
 end
 
@@ -157,11 +160,20 @@ function moreSlurry:initCows()
 			for _2, output in ipairs(subType.output.liquidManure.keyframes) do
 				local amount = output[1]
 				local age = output.time
-				local newAmount = amount * moreSlurry.settings.Multiplier
+				local newAmount = 0
+				local defAmount = 0
+				
+				if moreSlurry.init then 
+					defAmount = amount / moreSlurry.settings.OldMultiplier
+					newAmount = defAmount * moreSlurry.settings.Multiplier
+				else
+					defAmount = amount
+					newAmount = defAmount * moreSlurry.settings.Multiplier
+				end
 
 				output[1] = newAmount
 				
-				Logging.info("[%s]: Cow animal slurry amount has been updated. - Animal Type: %s - Age: %s - Old Value: %s - New Value: %s - Multiplier: %s", moreSlurry.name, animalType, age, amount, newAmount, moreSlurry.settings.Multiplier)
+				Logging.info("[%s]: Cow animal slurry amount has been updated. - Animal Type: %s - Age: %s - Default: %s - Old: %s - New: %s - Old Multiplier: %s - New Multiplier: %s", moreSlurry.name, animalType, age, defAmount, amount, newAmount, moreSlurry.settings.OldMultiplier, moreSlurry.settings.Multiplier)
 			end	
 
 		end
@@ -181,11 +193,20 @@ function moreSlurry:initPigs()
 			for _2, output in ipairs(subType.output.liquidManure.keyframes) do
 				local amount = output[1]
 				local age = output.time
-				local newAmount = amount * moreSlurry.settings.Multiplier
+				local newAmount = 0
+				local defAmount = 0
+				
+				if moreSlurry.init then 
+					defAmount = amount / moreSlurry.settings.OldMultiplier
+					newAmount = defAmount * moreSlurry.settings.Multiplier
+				else
+					defAmount = amount
+					newAmount = defAmount * moreSlurry.settings.Multiplier
+				end
 
 				output[1] = newAmount
 				
-				Logging.info("[%s]: Pig animal slurry amount has been updated. - Animal Type: %s - Age: %s - Old Value: %s - New Value: %s - Multiplier: %s", moreSlurry.name, animalType, age, amount, newAmount, moreSlurry.settings.Multiplier)
+				Logging.info("[%s]: Pig animal slurry amount has been updated. - Animal Type: %s - Age: %s - Default: %s - Old: %s - New: %s - Old Multiplier: %s - New Multiplier: %s", moreSlurry.name, animalType, age, defAmount, amount, newAmount, moreSlurry.settings.OldMultiplier, moreSlurry.settings.Multiplier)
 			end	
 
 		end

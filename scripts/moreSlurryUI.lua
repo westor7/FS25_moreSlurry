@@ -71,11 +71,11 @@ function moreSlurryUI:updateUiElements(skipAutoBindControls)
 end
 
 function moreSlurryUI:onFrameClose()
-	if moreSlurry.settings.Multiplier == moreSlurry.settings.Multiplier_OLD then return	end
-	
-	moreSlurry.settings.Multiplier_OLD = moreSlurry.settings.Multiplier
+	if moreSlurry.settings.Multiplier == moreSlurry.settings.OldMultiplier then return end
 	
 	moreSlurry:initAllAnimals()
+
+	moreSlurry.settings.OldMultiplier = moreSlurry.settings.Multiplier
 
 	g_currentMission:showBlinkingWarning(g_i18n:getText("mms_blink_warn"), 5000)
 end

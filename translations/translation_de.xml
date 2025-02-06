@@ -3,7 +3,7 @@
 	<translationContributors/>
 	<texts>
 		<text name = "mms_setting_title" 		text = "Mehr Gülle - Einstellungen"/>
-		<text name = "mms_Multiplier_short" 		text = "Güllemultiplikator"/>
+		<text name = "mms_Multiplier_short" 	text = "Güllemultiplikator"/>
 		<text name = "mms_Multiplier_long" 		text = "Wählen Sie Ihre Multiplikatorzahl, eine höhere Zahl ergibt mehr Gülle pro Spielstunde."/>
 		<text name = "mms_blink_warn"			text = "Achtung: Der Multiplikator für die Gülleproduktion durch Tiere wurde aktualisiert."/>
 	</texts>

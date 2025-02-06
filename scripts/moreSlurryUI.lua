@@ -10,12 +10,11 @@ local moreSlurryUI_mt = Class(moreSlurryUI)
 
 ---Creates the settings UI object
 ---@return SettingsUI @The new object
-function moreSlurryUI.new(settings, debug)
+function moreSlurryUI.new(settings)
     local self = setmetatable({}, moreSlurryUI_mt)
 
     self.controls = {}
 	self.settings = settings
-	self.debug = debug
 
     return self
 end
@@ -27,7 +26,7 @@ function moreSlurryUI:registerSettings()
 	
 	-- Define the UI controls. For each control, a <prefix>_<name>_short and _long key must exist in the i18n values
     local controlProperties = {
-        { name = "Multiplier", min = 1.5, max = 50, step = 0.5, autoBind = true, nillable = false }
+        { name = "Multiplier", min = 1.5, max = 100, step = 0.5, autoBind = true, nillable = false }
     }
 
     UIHelper.createControlsDynamically(settingsPage, "mms_setting_title", self, controlProperties, "mms_")
@@ -75,6 +74,8 @@ function moreSlurryUI:onFrameClose()
 	if moreSlurry.settings.Multiplier == moreSlurry.settings.Multiplier_OLD then return	end
 	
 	moreSlurry.settings.Multiplier_OLD = moreSlurry.settings.Multiplier
+	
+	moreSlurry:initAllAnimals()
 
 	g_currentMission:showBlinkingWarning(g_i18n:getText("mms_blink_warn"), 5000)
 end

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="94">
-    <author>westor</author>
-    <version>1.0.1.0</version>
-    <title>
+	<author>westor</author>
+	<version>1.0.1.0</version>
+	<title>
 		<en>More Slurry</en>
 		<de>Mehr Gülle</de>
 		<fr>Plus De Lisier</fr>
-    </title>
-    <description>
+	</title>
+	<description>
 <en><![CDATA[
 More Slurry is a mod that increase a husbandry slurry production from your animals amount every game hour,
 for example if '1' cow produce '100' liters slurry per hour and the multiplier is '1.5' then the new slurry would be '150' liters.
@@ -46,11 +46,11 @@ westor7 @ Discord ou https://github.com/westor7/FS25_moreSlurry pour toute sugge
 REMARQUE: ce mod ne fonctionne PAS en multijoueur!
 ]]>
 </fr>
-    </description>
+	</description>
 
-    <iconFilename>icon_moreSlurry.dds</iconFilename>
+	<iconFilename>icon_moreSlurry.dds</iconFilename>
 	
-    <multiplayer supported="true"/>
+	<multiplayer supported="true"/>
 	
 	<l10n filenamePrefix="translations/translation"/>
 	

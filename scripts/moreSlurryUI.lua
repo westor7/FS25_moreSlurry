@@ -11,53 +11,53 @@ local moreSlurryUI_mt = Class(moreSlurryUI)
 ---Creates the settings UI object
 ---@return SettingsUI @The new object
 function moreSlurryUI.new(settings)
-    local self = setmetatable({}, moreSlurryUI_mt)
+	local self = setmetatable({}, moreSlurryUI_mt)
 
-    self.controls = {}
+	self.controls = {}
 	self.settings = settings
 
-    return self
+	return self
 end
 
 ---Register the UI into the base game UI
 function moreSlurryUI:registerSettings()
-    -- Get a reference to the base game general settings page
-    local settingsPage = g_gui.screenControllers[InGameMenu].pageSettings
+	-- Get a reference to the base game general settings page
+	local settingsPage = g_gui.screenControllers[InGameMenu].pageSettings
 	
 	-- Define the UI controls. For each control, a <prefix>_<name>_short and _long key must exist in the i18n values
-    local controlProperties = {
-        { name = "Multiplier", min = 1.5, max = 100, step = 0.5, autoBind = true, nillable = false }
-    }
+	local controlProperties = {
+		{ name = "Multiplier", min = 1.5, max = 100, step = 0.5, autoBind = true, nillable = false }
+	}
 
-    UIHelper.createControlsDynamically(settingsPage, "mms_setting_title", self, controlProperties, "mms_")
-    UIHelper.setupAutoBindControls(self, self.settings, moreSlurryUI.onSettingsChange)
+	UIHelper.createControlsDynamically(settingsPage, "mms_setting_title", self, controlProperties, "mms_")
+	UIHelper.setupAutoBindControls(self, self.settings, moreSlurryUI.onSettingsChange)
 
-    -- Apply initial values
-    self:updateUiElements()
+	-- Apply initial values
+	self:updateUiElements()
 
-    -- Update any additional settings whenever the frame gets opened
-    InGameMenuSettingsFrame.onFrameOpen = Utils.appendedFunction(InGameMenuSettingsFrame.onFrameOpen, function()
-        self:updateUiElements(true) -- We can skip autobind controls here since they are already registered to onFrameOpen
-    end)
+	-- Update any additional settings whenever the frame gets opened
+	InGameMenuSettingsFrame.onFrameOpen = Utils.appendedFunction(InGameMenuSettingsFrame.onFrameOpen, function()
+		self:updateUiElements(true) -- We can skip autobind controls here since they are already registered to onFrameOpen
+	end)
 	
 	-- Trigger to update the values when settings frame is closed
 	InGameMenuSettingsFrame.onFrameClose = Utils.appendedFunction(InGameMenuSettingsFrame.onFrameClose, function()
 		self:onFrameClose();
-   	end);
+	end);
 
 end
 
 function moreSlurryUI:onSettingsChange()
-    self:updateUiElements()
+	self:updateUiElements()
 end
 
 ---Updates the UI elements to reflect the current settings
 ---@param skipAutoBindControls boolean|nil @True if controls with the autoBind properties shall not be newly populated
 function moreSlurryUI:updateUiElements(skipAutoBindControls)
-    if not skipAutoBindControls then
-        -- Note: This method is created dynamically by UIHelper.setupAutoBindControls
-        self.populateAutoBindControls()
-    end
+	if not skipAutoBindControls then
+		-- Note: This method is created dynamically by UIHelper.setupAutoBindControls
+		self.populateAutoBindControls()
+	end
 
 	local isAdmin = g_currentMission:getIsServer() or g_currentMission.isMasterUser
 
@@ -65,9 +65,9 @@ function moreSlurryUI:updateUiElements(skipAutoBindControls)
 		control:setDisabled(not isAdmin)
 	end
 	
-    -- Update the focus manager
-    local settingsPage = g_gui.screenControllers[InGameMenu].pageSettings
-    settingsPage.generalSettingsLayout:invalidateLayout()
+	-- Update the focus manager
+	local settingsPage = g_gui.screenControllers[InGameMenu].pageSettings
+	settingsPage.generalSettingsLayout:invalidateLayout()
 end
 
 function moreSlurryUI:onFrameClose()

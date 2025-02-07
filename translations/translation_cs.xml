@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+	<translationContributors>Google translate</translationContributors>
+	<texts>
+		<text name = "mms_setting_title" 			text = "Více kaše - Nastavení"/>
+		<text name = "mms_Multiplier_short" 		text = "Multiplikátor produkce kejdy"/>
+		<text name = "mms_Multiplier_long" 			text = "Vyberte své číslo násobiče, vyšší číslo dostane více kaše za hodinu hry."/>
+		<text name = "mms_blink_warn"				text = "Upozornění: Byl aktualizován multiplikátor produkce kejdy ze zvířat."/>
+	</texts>
+</l10n>

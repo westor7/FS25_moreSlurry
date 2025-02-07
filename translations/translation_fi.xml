@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+	<translationContributors>Google translate</translationContributors>
+	<texts>
+		<text name = "mms_setting_title" 			text = "Lisää lietettä - Asetukset"/>
+		<text name = "mms_Multiplier_short" 		text = "Lietteen tuottokerroin"/>
+		<text name = "mms_Multiplier_long" 			text = "Valitse kertoimen numero, suurempi numero saa enemmän lietettä pelituntia kohden."/>
+		<text name = "mms_blink_warn"				text = "Varoitus: Lietteen tuotantokerroin eläimistä on päivitetty."/>
+	</texts>
+</l10n>

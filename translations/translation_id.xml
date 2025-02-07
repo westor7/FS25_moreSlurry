@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+	<translationContributors>Google translate</translationContributors>
+	<texts>
+		<text name = "mms_setting_title" 			text = "Lebih Banyak Bubur - Pengaturan"/>
+		<text name = "mms_Multiplier_short" 		text = "Pengganda Produksi Bubur"/>
+		<text name = "mms_Multiplier_long" 			text = "Pilih angka pengali Anda, angka yang lebih tinggi akan menghasilkan lebih banyak bubur per jam permainan."/>
+		<text name = "mms_blink_warn"				text = "Peringatan: Pengganda produksi bubur dari hewan telah diperbarui."/>
+	</texts>
+</l10n>

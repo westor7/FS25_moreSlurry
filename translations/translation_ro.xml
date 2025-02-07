@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+	<translationContributors>Google translate</translationContributors>
+	<texts>
+		<text name = "mms_setting_title" 			text = "Mai mult Slurry - Setări"/>
+		<text name = "mms_Multiplier_short" 		text = "Multiplicator de produse de șlam"/>
+		<text name = "mms_Multiplier_long" 			text = "Selectați numărul multiplicatorului, numărul mai mare devine mai mult nămol pe oră de joc."/>
+		<text name = "mms_blink_warn"				text = "Avertisment: multiplicatorul producției de șlam de la animale a fost actualizat."/>
+	</texts>
+</l10n>

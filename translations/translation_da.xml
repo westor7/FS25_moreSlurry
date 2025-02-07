@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+	<translationContributors>Google translate</translationContributors>
+	<texts>
+		<text name = "mms_setting_title" 			text = "Mere gylle - Indstillinger"/>
+		<text name = "mms_Multiplier_short" 		text = "Gylleproducerende multiplikator"/>
+		<text name = "mms_Multiplier_long" 			text = "Vælg dit multiplikatortal, højere tal får mere gylle pr. spilletime."/>
+		<text name = "mms_blink_warn"				text = "Advarsel: Gylleproduktionsmultiplikatoren fra dyr er blevet opdateret."/>
+	</texts>
+</l10n>

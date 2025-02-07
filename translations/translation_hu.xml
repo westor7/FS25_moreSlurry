@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+	<translationContributors>Google translate</translationContributors>
+	<texts>
+		<text name = "mms_setting_title" 			text = "További hígtrágya - Beállítások"/>
+		<text name = "mms_Multiplier_short" 		text = "Hígtrágya termelési szorzó"/>
+		<text name = "mms_Multiplier_long" 			text = "Válassza ki a szorzószámot, a nagyobb szám több zagyot kap játékóránként."/>
+		<text name = "mms_blink_warn"				text = "Figyelmeztetés: Az állatokból származó hígtrágyatermelési szorzó frissítve lett."/>
+	</texts>
+</l10n>

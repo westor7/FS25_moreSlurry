@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+	<translationContributors>Google translate</translationContributors>
+	<texts>
+		<text name = "mms_setting_title" 			text = "Muioc'h a Slurry - Arventennoù"/>
+		<text name = "mms_Multiplier_short" 		text = "Lieskementer produiñ ar soubenn"/>
+		<text name = "mms_Multiplier_long" 			text = "Dibabit ho niver lieskementer, an niver uheloc'h a resev muioc'h a skorn dre eurvezh c'hoari."/>
+		<text name = "mms_blink_warn"				text = "Diwallit : hizivaet eo bet al lieskementer produiñ louzoù diwar al loened."/>
+	</texts>
+</l10n>

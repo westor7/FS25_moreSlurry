@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+	<translationContributors>Google translate</translationContributors>
+	<texts>
+		<text name = "mms_setting_title" 			text = "Più fanghi - Impostazioni"/>
+		<text name = "mms_Multiplier_short" 		text = "Moltiplicatore di prodotti liquami"/>
+		<text name = "mms_Multiplier_long" 			text = "Seleziona il numero del moltiplicatore: più alto è il numero, più fanghi saranno distribuiti per ora di gioco."/>
+		<text name = "mms_blink_warn"				text = "Attenzione: il moltiplicatore della produzione di liquami provenienti da animali è stato aggiornato."/>
+	</texts>
+</l10n>

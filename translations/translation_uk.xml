@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+	<translationContributors>Google translate</translationContributors>
+	<texts>
+		<text name = "mms_setting_title" 			text = "More Slurry - Налаштування"/>
+		<text name = "mms_Multiplier_short" 		text = "Мультиплікатор виробництва шламу"/>
+		<text name = "mms_Multiplier_long" 			text = "Виберіть число множника, більше число отримає більше суспензії за ігрову годину."/>
+		<text name = "mms_blink_warn"				text = "Попередження: оновлено коефіцієнт виробництва гною від тварин."/>
+	</texts>
+</l10n>

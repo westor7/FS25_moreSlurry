@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+	<translationContributors>Google translate</translationContributors>
+	<texts>
+		<text name = "mms_setting_title" 			text = "Más lodo - configuraciones"/>
+		<text name = "mms_Multiplier_short" 		text = "Multiplicador de producción de purines"/>
+		<text name = "mms_Multiplier_long" 			text = "Selecciona tu número multiplicador, cuanto mayor sea el número, más lodo obtendrás por hora de juego."/>
+		<text name = "mms_blink_warn"				text = "Advertencia: Se ha actualizado el multiplicador de producción de purines a partir de animales."/>
+	</texts>
+</l10n>

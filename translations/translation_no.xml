@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+	<translationContributors>Google translate</translationContributors>
+	<texts>
+		<text name = "mms_setting_title" 			text = "Mer Slurry - Innstillinger"/>
+		<text name = "mms_Multiplier_short" 		text = "Slurry Producer Multiplikator"/>
+		<text name = "mms_Multiplier_long" 			text = "Velg multiplikatornummeret ditt, høyere tall får mer slurry per spilletime."/>
+		<text name = "mms_blink_warn"				text = "Advarsel: Slurryproduksjonsmultiplikatoren fra dyr er oppdatert."/>
+	</texts>
+</l10n>

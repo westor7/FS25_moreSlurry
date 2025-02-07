@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+	<translationContributors>Google translate</translationContributors>
+	<texts>
+		<text name = "mms_setting_title" 			text = "Więcej szlamu - Ustawienia"/>
+		<text name = "mms_Multiplier_short" 		text = "Mnożnik produkcji gnojowicy"/>
+		<text name = "mms_Multiplier_long" 			text = "Wybierz liczbę mnożnika, im wyższa liczba, tym więcej szlamu na godzinę gry."/>
+		<text name = "mms_blink_warn"				text = "Ostrzeżenie: Zaktualizowano mnożnik produkcji gnojowicy pochodzącej od zwierząt."/>
+	</texts>
+</l10n>

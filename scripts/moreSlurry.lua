@@ -142,14 +142,19 @@ function moreSlurry:initAllAnimals()
 	
 	Logging.info("[%s]: Start of animals slurry updates. - Total: %s", moreSlurry.name, table.getn(types))
 
-	moreSlurry:initCows()
-	moreSlurry:initPigs()
+	moreSlurry:initAnimals(true, false)
+	moreSlurry:initAnimals(false, true)
 	
 	Logging.info("[%s]: End of animals slurry updates. - Updated: %s - Total: %s", moreSlurry.name, moreSlurry.updated, table.getn(types))
 end
 
-function moreSlurry:initCows()
-	for _1, subTypeIndex in ipairs(g_currentMission.animalSystem.nameToType["COW"].subTypes) do
+function moreSlurry:initAnimals(animalCows, animalPigs)
+	local animalCall = ""
+
+	if animalCows then animalCall = "COW" end
+	if animalPigs then animalCall = "PIG" end
+	
+	for _1, subTypeIndex in ipairs(g_currentMission.animalSystem.nameToType[animalCall].subTypes) do
 		local subType = g_currentMission.animalSystem.subTypes[subTypeIndex]
 
 		if subType.output.liquidManure then
@@ -173,40 +178,7 @@ function moreSlurry:initCows()
 
 				output[1] = newAmount
 				
-				Logging.info("[%s]: Cow animal slurry amount has been updated. - Animal Type: %s - Age: %s - Default: %s - Old: %s - New: %s - Old Multiplier: %s - New Multiplier: %s", moreSlurry.name, animalType, age, defAmount, amount, newAmount, moreSlurry.settings.OldMultiplier, moreSlurry.settings.Multiplier)
-			end	
-
-		end
-		
-	end
-end
-
-function moreSlurry:initPigs()
-	for _1, subTypeIndex in ipairs(g_currentMission.animalSystem.nameToType["PIG"].subTypes) do
-		local subType = g_currentMission.animalSystem.subTypes[subTypeIndex]
-
-		if subType.output.liquidManure then
-			local animalType = subType.name
-			
-			moreSlurry.updated = moreSlurry.updated + 1
-		
-			for _2, output in ipairs(subType.output.liquidManure.keyframes) do
-				local amount = output[1]
-				local age = output.time
-				local newAmount = 0
-				local defAmount = 0
-				
-				if moreSlurry.init then 
-					defAmount = amount / moreSlurry.settings.OldMultiplier
-					newAmount = defAmount * moreSlurry.settings.Multiplier
-				else
-					defAmount = amount
-					newAmount = defAmount * moreSlurry.settings.Multiplier
-				end
-
-				output[1] = newAmount
-				
-				Logging.info("[%s]: Pig animal slurry amount has been updated. - Animal Type: %s - Age: %s - Default: %s - Old: %s - New: %s - Old Multiplier: %s - New Multiplier: %s", moreSlurry.name, animalType, age, defAmount, amount, newAmount, moreSlurry.settings.OldMultiplier, moreSlurry.settings.Multiplier)
+				Logging.info("[%s]: %s animal slurry amount has been updated. - Animal Type: %s - Age: %s - Default: %s - Old: %s - New: %s - Old Multiplier: %s - New Multiplier: %s", moreSlurry.name, animalCall, animalType, age, defAmount, amount, newAmount, moreSlurry.settings.OldMultiplier, moreSlurry.settings.Multiplier)
 			end	
 
 		end
